@@ -1,0 +1,28 @@
+{
+  "name": "assignment-11",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-TayeburRahman.git"
+  },
+  "bugs": {
+    "url": "https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-TayeburRahman/issues"
+  },
+  "homepage": "https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-TayeburRahman#readme",
+  "description": ""
+}
