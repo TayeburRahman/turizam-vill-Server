@@ -100,3 +100,10 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log("Hit Server", port);
 });
+
+
+
+
+// git remote add origin https://github.com/TayeburRahman/turizam_vill_clints.git
+// git branch -M main
+// git push -u origin main
