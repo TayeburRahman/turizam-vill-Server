@@ -56,37 +56,37 @@ async function run() {
     });
 
     // DELETE Orders
-    // app.delete("/booking/:id", async (req, res) => {
-    //   const id = req.params.id;
-    //   console.log("id");
-    //   const query = { _id: ObjectId(id) };
-    //   const result = await bookingCollection.deleteOne(query);
-    //   res.json(result);
-    // });
+    app.delete("/booking/:id", async (req, res) => {
+      const id = req.params.id;
+      console.log("id");
+      const query = { _id: ObjectId(id) };
+      const result = await bookingCollection.deleteOne(query);
+      res.json(result);
+    });
     // Update Orders
-    // app.put("/booking/:id", async (req, res) => {
-    //   const id = req.params.id;
-    //   console.log("id", id);
-    //   const update = req.body;
-    //   const filter = { _id: ObjectId(id) };
-    //   console.log(filter);
-    //   const options = {upseert : true}
-    //   const updateDoc ={
-    //     $set:{
-    //       state: update.state,
-    //     }
-    //   }
-    //   console.log("update", updateDoc);
-    //   const result = await  bookingCollection.updateOne(filter, updateDoc, options)
-    //   res.send(result)
-    // });
+    app.put("/booking/:id", async (req, res) => {
+      const id = req.params.id;
+      console.log("id", id);
+      const update = req.body;
+      const filter = { _id: ObjectId(id) };
+      console.log(filter);
+      const options = {upseert : true}
+      const updateDoc ={
+        $set:{
+          state: update.state,
+        }
+      }
+      console.log("update", updateDoc);
+      const result = await  bookingCollection.updateOne(filter, updateDoc, options)
+      res.send(result)
+    });
 
-    // // GET API
-    // app.get("/booking", async (req, res) => {
-    //   const cursor = bookingCollection.find({});
-    //   const services = await cursor.toArray();
-    //   res.send(services);
-    // });
+    // GET API
+    app.get("/booking", async (req, res) => {
+      const cursor = bookingCollection.find({});
+      const services = await cursor.toArray();
+      res.send(services);
+    });
   } finally {
     // await client.close()
   }
@@ -100,10 +100,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log("Hit Server", port);
 });
-
-
-
-
-// git remote add origin https://github.com/TayeburRahman/turizam_vill_clints.git
-// git branch -M main
-// git push -u origin main
